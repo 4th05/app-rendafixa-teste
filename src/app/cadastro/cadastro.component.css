@@ -18,9 +18,7 @@
     z-index: 1;  
     bottom: 30px;
     font-size: 17px;
-    vertical-align: auto;
-    margin-left: 20px;
-    
+    left: 33%;    
   }
   
   #snackbarerror.show {
@@ -42,6 +40,7 @@
     margin-left: 30px;
     margin-right: 30px;  
     bottom: 30px;
+    left: 33%;
     font-size: 17px;
   }
   

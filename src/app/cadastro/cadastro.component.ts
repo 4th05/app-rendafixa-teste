@@ -18,7 +18,7 @@ export class CadastroComponent implements OnInit {
 
   cliente = new Cliente()
 
-  myFunction(y) {
+  msgFunction(y) {
     var x = document.getElementById(y);
     x.className = "show";
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
@@ -43,12 +43,12 @@ export class CadastroComponent implements OnInit {
           .pipe(map(res=>res))
           .subscribe(dados => console.log(dados))
         
-        this.myFunction("snackbarok");
+        this.msgFunction("snackbarok");
 
         window.setTimeout(this.reloadFunction, 1150);
       }
     else{
-      this.myFunction("snackbarerror");
+      this.msgFunction("snackbarerror");
     }
   }
 

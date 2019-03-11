@@ -1,5 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {map} from "rxjs/operators"
+
+class Cliente{
+  nome: string;
+  email: string;
+  telefone: number;
+  url_avatar: string;
+}
 
 @Component({
   selector: 'app-cadastro',
@@ -8,6 +16,41 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CadastroComponent implements OnInit {
 
+  cliente = new Cliente()
+
+  myFunction(y) {
+    var x = document.getElementById(y);
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }
+
+  reloadFunction(){
+    window.location.reload()
+  }
+
+  onSubmit(form: any) {
+    this.cliente.nome = form.value.nome;
+    this.cliente.email = form.value.email;
+    this.cliente.telefone = form.value.telefone;
+    this.cliente.url_avatar = form.value.url_avatar;
+
+    if (this.cliente.nome !== ""
+      && this.cliente.email !== ""
+      && this.cliente.telefone !== null
+      && this.cliente.url_avatar !== ""){
+    
+        this.http.post("http://127.0.0.1:5000/insert_record", JSON.stringify(this.cliente))
+          .pipe(map(res=>res))
+          .subscribe(dados => console.log(dados))
+        
+        this.myFunction("snackbarok");
+
+        window.setTimeout(this.reloadFunction, 1150);
+      }
+    else{
+      this.myFunction("snackbarerror");
+    }
+  }
 
   constructor(private http: HttpClient ) { }
 

@@ -5,3 +5,68 @@
     border-radius: 12px;
     width: 100%
 }
+
+#snackbarerror {
+    visibility: hidden;
+    width: 250px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;  
+    bottom: 30px;
+    font-size: 17px;
+    vertical-align: auto;
+    margin-left: 20px;
+    
+  }
+  
+  #snackbarerror.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+
+  #snackbarok {
+    visibility: hidden;
+    width: 300px;
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 8px;
+    position: relative;
+    z-index: 1;
+    margin-left: 30px;
+    margin-right: 30px;  
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbarok.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }

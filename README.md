@@ -1,6 +1,6 @@
 # App Renda Fixa - teste
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1. It was developed to extract user information from a database (in this case mongoDB) filling the search results into a web app (a list component). This web app also enables new users to add their personal information to this database, updating them and bringing this new information to the list. The back-end API was developed in Flask.
 
 ## Development server
 

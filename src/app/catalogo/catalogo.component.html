@@ -1,0 +1,30 @@
+<div id="card" class="mdl-card">
+    <div class="mdl-card__title">
+    Usuários cadastrados
+    </div>
+    <div class="mdl-card__supporting-text">
+      <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+          <thead>
+            <tr style="background-color: rgb(63,81,181)">
+              <th class="mdl-data-table__cell--non-numeric" style="color: rgb(255,255,255)"></th>
+              <th class="mdl-data-table__cell--non-numeric" style="color: rgb(255,255,255)">Nome</th>
+              <th class="mdl-data-table__cell--non-numeric" style="color: rgb(255,255,255)">Email</th>
+              <th class="mdl-data-table__cell--non-numeric" style="color: rgb(255,255,255)">Telefone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of clientes">
+              <td class="mdl-data-table__cell--non-numeric">
+                <img src="{{item.url_avatar}}" alt="Avatar" class="avatar">
+              </td>
+
+              <td class="mdl-data-table__cell--non-numeric">{{item.nome}}</td>
+
+              <td class="mdl-data-table__cell--non-numeric">{{item.email}}</td>
+            
+              <td class="mdl-data-table__cell--non-numeric">{{item.telefone}}</td>
+            </tr>
+          </tbody>
+      </table>    
+    </div>
+  </div>

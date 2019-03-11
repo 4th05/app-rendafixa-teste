@@ -1,8 +1,45 @@
-<div class="mdl-card" style="width: 400px">
+<div id="card" class="mdl-card">
     <div class="mdl-card__title">
     Cadastrar usuário
     </div>
     <div class="mdl-card__supporting-text">
-    ...
+        <form>
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" id="sample3">
+                <label class="mdl-textfield__label" for="sample3">Nome</label>
+              </div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="sample3">
+                  <label class="mdl-textfield__label" for="sample3">Email</label>
+              </div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample4">
+                  <label class="mdl-textfield__label" for="sample4">Telefone</label>
+                  <span class="mdl-textfield__error">Digite no formato xx xxxxx-xxxx.</span>
+                </div>
+              </div>
+          </div>
+        
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="sample3">
+                  <label class="mdl-textfield__label" for="sample3">Url avatar</label>
+              </div>
+            </div>
+            <div class="mdl-cell mdl-cell--6-col"></div>
+            <div class="mdl-cell mdl-cell--2-col">
+              <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+                <i class="material-icons">add</i>
+              </button>
+            </div>
+          </div>
+        </form>
     </div>
   </div>
